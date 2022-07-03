@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Open+Sans:wght@300;400&display=swap');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --primary-color: hsla(124, 70%, 30%, 1);
+    --secondary-color: hsla(90, 50%, 50%, 1);
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --white-color: #fff;
+    --very-dark-color: rgba(8, 8, 8);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* navbar*/
+
+.navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    background-color: var(--very-dark-color);
+    color: var(--white-color);
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.2rem 1rem;
+    opacity: 0.8;
+}
+
+.nav-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title h1 {
+    font-weight: 300;
+}
+
+.ham-btn {
+    background-color: transparent;
+    color: #fff;
+    font-size: 30px;
+    border: none;
+    display: none;
+}
+
+.navbar nav ul {
+    display: flex;
+}
+
+.navbar nav ul li {
+    height: 100%;
+}
+
+.navbar nav ul li a {
+    padding: 0.7rem;
+    color: var(--white-color);
+    font-size: 1.1rem;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.4s ease-in;
+}
+
+.navbar nav ul li a:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* hero*/
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('../images/dog2.jpg') no-repeat;
+    background-position-y: 20%;
+    background-position-x: center;
+    background-size: cover;
+}
+
+.content {
+    color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding-left: 1rem;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.content p {
+    position: absolute;
+    bottom: 250px;
+    font-size: 1.2rem;
+}
+
+.content .btn {
+    position: absolute;
+    bottom: 140px;
+}
+
+@media (max-width:900px) {
+    .navbar {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .show-nav {
+        display: block;
+    }
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .navbar nav ul li {
+        margin: 10px 0;
+        padding-bottom: 10px;
+    }
+    .ham-btn {
+        cursor: pointer;
+        display: inline-block;
+    }
+}
